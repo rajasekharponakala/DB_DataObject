@@ -203,7 +203,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
      <notes><![CDATA[
       Small fix release.
 
-     fix bug #17554 - update when id=0 (or primary key is 0) - thanks to the persistance of Jacek Pawlowski
+     fix bug #17554 - update when id=0 (or primary key is 0) - thanks to the persistence of Jacek Pawlowski
 
  
              
@@ -308,7 +308,7 @@ New Features
         New Features:
         #-------  class_location accepts multiple locations with PATH_SEPARATOR 
         #-------  class_prefix accepts multiple prefixes with PATH_SEPARATOR 
-        #-------  ini_DATABASENAME merges all found ini files in paths (seperated by PATH_SEPARATOR)
+        #-------  ini_DATABASENAME merges all found ini files in paths (separated by PATH_SEPARATOR)
                     previous behaviour was just to read the first. - this applies to matching links.ini files.
         #12550 -  disable_null_strings=full -- see the bug report for details - it is highly recommended not to use this feature,
                   as it may result in data being deleted from your database if not used carefully.
@@ -578,7 +578,7 @@ New Features
             #10175 - MDB2 does not return length value 
             #9573 - enable disable_null_strings to turn of "null"-> NULL replacements
             #9625 - MDB2 support for MSSQL sequencies
-            #9644 - incorrect constant in foriegn key generation.
+            #9644 - incorrect constant in foreign key generation.
             #9628 - support MDB2 for defaults()
             #9839 - Invalid column names can not be supported, so warning is generated
             #9834 - SQL2003 standards on Joins - adds brackets around ON()
@@ -634,7 +634,7 @@ New Features
         * Feature Request #4266 - Allow joins with multiple keys
         
         Minor Changes:
-        * dont flush on debugging html output
+        * don't flush on debugging html output
         * links.ini code generation based on schema (mysql[i] only) -
             option:generate_links=true - thanks to Pacal Schoni    
         * add warning about unknown types in generator.
@@ -767,7 +767,7 @@ Bugs
    <notes>
 Bugs
 ----
-#6153 - dont call autoload on PHP5 - kludgy wrapper around class_exists()
+#6153 - don't call autoload on PHP5 - kludgy wrapper around class_exists()
 #6458 - clear staticGet cache when calling free()        
 #6442 - validation not working correctly on DB_DataObject_Cast Objects
 Changes/New Features
@@ -805,7 +805,7 @@ Bugs:
 #5036 - make sure DB is loaded before using it
 #5264 - add optional dep on MDB
 #5416 - use tablea AS tableb only for postgress/mysql -
-        oracle doesnt need the AS bit - and I guess a few others too..
+        oracle doesn't need the AS bit - and I guess a few others too..
         available and first fetch fails
         conditions
 #5614 - joinAdd check to see if object being joined is
@@ -828,14 +828,14 @@ Feature Requests:
 
 Other Changes
 
-    default behaviour.. so it shouldnt really have affected anyone..
+    default behaviour.. so it shouldn't really have affected anyone..
     amazed no one picked this up before..
 * make WHERE stripping better  = well spotted Justin
 * catch errors returned from nextID - like permission denied etc.,
     add warnings in debug mode if we are using objects  or arrays for
     some reason, fix error messages
-* correct the dependancy on packages
-* the dont die here causes a recursive error and segfaults
+* correct the dependency on packages
+* the don't die here causes a recursive error and segfaults
     everything if it doesnt return..
 * use is_a, rather than PEAR, as one day we may remove that dep...
 * fix PHP4.4* issues with returning by reference..
@@ -910,7 +910,7 @@ Bugs Fixed.
             #4203 - schema mess with postgres.
                     generator_strip_schema=1
                     will strip the schema part from the name of the table.
-  * fix bug #4168 - if connection test is sucessfull, dont try and
+  * fix bug #4168 - if connection test is sucessfull, don't try and
                     connect.. (performance improvement)
   * fix bug #4040 - prevent toArray from calling getLink and getLinks
   * fix bug #4019 - createTables uses sets up options for DB
@@ -1090,7 +1090,7 @@ Bug Fixes:
    <notes>
 A few releases where skipped, this should be the amalgamated upgrade!
 
-Note: php4.3.10 will exit with an error if you dont define NO_OVERLOAD, rather 
+Note: php4.3.10 will exit with an error if you don't define NO_OVERLOAD, rather 
 than segfaulting..
 
 Generator is buggy with 5.0.3 - upgrade DB or PHP..
@@ -1167,7 +1167,7 @@ Features Added:
 Bug Fixes:
   #2088 - class_prefix may be left out.
   #------ php4.2 compatibility should work as advertised in last realease
-  #------ Generator didnt have DB loaded due to lazy load changes.
+  #------ Generator didn't have DB loaded due to lazy load changes.
 
    </notes>
   </release>
@@ -1186,7 +1186,7 @@ Bug Fixes:
   
   
 Bug Fixes:
-  #1559 - __FUNCTION__ remove, so dependancy on php 4.2 may still be valid.
+  #1559 - __FUNCTION__ remove, so dependency on php 4.2 may still be valid.
   #1595 - regex include/exclude working correctly (Thanks to Stephane Gully)
   #1664 - configuration line links_{databasename} now available 
   #1726 - enable orderby and limit can be used with delete()   
@@ -1205,8 +1205,8 @@ Bug Fixes:
   
 Changes:
   * DebugLevel(1) now displays native errors from database when queries fail.
-  * Result Field names now stored seperately from Result Object
-  * free() method added, to clean up memory instantly, if you are doing alot of queries.
+  * Result Field names now stored separately from Result Object
+  * free() method added, to clean up memory instantly, if you are doing a lot of queries.
       = Cleans Result Fields, Result Object, NumRows returned in Connection object.
   * include path is used to do file hunting if factory fails to find file.
   * DB is lazy loaded on connection.b
@@ -1244,7 +1244,7 @@ Changes:
 
 * DB_DataObject_Error added to enable testing for dataobject errors
 * Date fixes - needs latest date package.
-* Generator fails with clear message if backend doesnt support tableInfo
+* Generator fails with clear message if backend doesn't support tableInfo
 * added cidr, inet, macaddr for postgres
 * new options to filter generation of classes
   generator_include_regex = /foo_.*/i
@@ -1355,7 +1355,7 @@ Fixes
 * fix bug #605 - ability to specify sequence names
   option sequence_{tablename} = {column} // default {tablename}_seq
   option sequence_{tablename} = {column}:{sequence_name}
-* Dependancy on Date added. (it is used by the setter/getters)
+* Dependency on Date added. (it is used by the setter/getters)
 
    </notes>
   </release>
